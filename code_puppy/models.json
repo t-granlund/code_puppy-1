@@ -92,14 +92,18 @@
       "top_p": 0.95,
       "top_k": 40,
       "repetition_penalty": 1.0,
-      "context_compression_threshold": 100000
+      "context_compression_threshold": 80000
     },
     "context_management": {
-      "max_context_tokens": 120000,
+      "max_context_tokens": 100000,
       "reserve_for_response": 11072,
       "compaction_strategy": "sliding_window",
       "compress_old_messages": true,
-      "min_old_message_tokens": 2048
+      "min_old_message_tokens": 1024
+    },
+    "rate_limit": {
+      "max_requests_per_minute": 20,
+      "delay_between_requests": 0.5
     }
   },
   "claude-4-5-haiku": {
